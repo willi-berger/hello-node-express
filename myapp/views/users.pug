@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div(class='container')
+		h2= title
+		p Welcome to #{title}
+
+		table(class='table') 
+			thead
+				tr
+				td Id
+				td First Name
+				td Last Name
+			tbody 
+				each u in users
+					tr
+						td 
+							a(class="button", href="/users/"+u.id)=u.id
+						td= u.firstName
+						td= u.lastName
+		a(class="button", href="/users/add") add user

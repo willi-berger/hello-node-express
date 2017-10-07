@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class='container')
+     h2= title
+     p Welcome to #{title}
+     form(method='POST' action='/users/save')
+       div.form-group
+         label(for='firstName') First Name
+         input(type='text', class='form-control', name='firstName', id='firstName', value=user.firstName, required, placeholder='first name')
+         label(for='lastName') Last Name
+         input(type='text', class='form-control', name='lastName', id='lastName', value=user.lastName, required, placeholder='last name')
+         input(type='hidden', name='id', value=user.id)
+       button.btn.btn-default(type='submit') Submit
