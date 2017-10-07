@@ -104,6 +104,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+#
+*.geany
+
 # dotenv environment variables file
 .env
 

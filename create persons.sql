@@ -1,3 +1,5 @@
+-- create persons table 
+--
 CREATE TABLE IF NOT EXISTS persons (
   id int NOT NULL  AUTO_INCREMENT ,
   first_name char(15) DEFAULT NULL,
@@ -8,4 +10,3 @@ CREATE TABLE IF NOT EXISTS persons (
   primary key(id)
 );
 
--- SELECT @@global.time_zone, @@session.time_zone;
