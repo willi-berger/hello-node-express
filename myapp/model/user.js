@@ -72,7 +72,6 @@ module.exports.load = function (id, callback)
 	var connection =createConnection();
 	connection.connect()
 	console.log('query');
-	// TODO possible SQL Injection ??
 	connection.query('select id as id, first_name as firstName, last_name as lastName from persons where id = ?', id, function (err, rows, fields) {
 		console.log('query.callback');        
 		if (err) {

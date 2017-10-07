@@ -28,20 +28,10 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=3
-FILE_NAME_0=670;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fapp.js;0;4
-FILE_NAME_1=823;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Froutes%2Fusers.js;0;4
-FILE_NAME_2=350;None;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fviews%2Fusers.pug;0;4
-FILE_NAME_3=1971;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fmodel%2Fuser.js;0;4
-FILE_NAME_4=526;None;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fviews%2Fuser.pug;0;4
-FILE_NAME_5=0;None;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fviews%2Ferror.pug;0;4
-FILE_NAME_6=0;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fwillie%2Fwork%2Fnode%2Fexpress%2Fhello-world-generator%2Fmyapp%2Fbin%2Fwww;0;4
+current_page=-1
 
 [VTE]
-last_dir=/home/willie/work/node/express/hello-world-generator/myapp
+last_dir=/home/willie
 
 [build-menu]
-JSONFT_00_LB=run
-JSONFT_00_CM=DEBUG=myapp:* npm start
-JSONFT_00_WD=
 filetypes=JSON;
