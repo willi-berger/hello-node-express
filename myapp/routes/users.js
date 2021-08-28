@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var userModel = require('../model/user');
+var userModel = require('../model/mongodb/user');
 
 
 const util = require("util");

@@ -1,11 +1,11 @@
 # hello-node-express
 
 ## Synopsis
-A very simple web application build with Node and express and the pug template engine. Contains a list view for "Users" with Create/Update/Delete Functionality. 
+A very simple web application build with Node and express and the pug template engine. Contains a list view for "Users" with Create/Update/Delete Functionality. Has a MongoDB or mySQL backend.
 
 ## Requirements
-node --version v5.12.0; or maybe higher. 
-mysql
+* node --version v5.12.0; or maybe higher. 
+* mysql or MongoDB
 
 
 ## Installation
