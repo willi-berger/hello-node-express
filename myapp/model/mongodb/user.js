@@ -13,18 +13,17 @@ var url = "mongodb://127.0.0.1:27017/mydb";
 /** create user*/
 module.exports.create = function (user, callback)
 {
-	console.log('UserModel.save user:' + JSON.stringify(user));
-	var connection = createConnection();
-	connection.connect()
-	connection.query('insert into persons (first_name, last_name) values (?, ?)', 
-		[user.firstName, user.lastName], 
-		function (err, rows, fields) {
-			if (err) {
-				return callback(err);
-			}
-			callback(null);
+	console.log('MongoDb/UserModel.save user:' + JSON.stringify(user));
+	MongoClient.connect(url, function(err, db) {
+		if (err) callback(err);
+		var dbo = db.db("mydb");
+		dbo.collection("persons").insertOne(user, function(err, result) {
+		  if (err) callback(err);
+		  console.log(result);
+		  db.close();
+		  callback(null, null);
 		});
-	connection.end()	
+	  }); 
 }
 
 
@@ -32,17 +31,18 @@ module.exports.create = function (user, callback)
 module.exports.save = function (user, callback) 
 {
 	console.log('UserModel.save user:' + JSON.stringify(user));
-	var connection = createConnection();
-	connection.connect()
-	connection.query('update persons set first_name = ?, last_name = ? where id = ?', 
-		[user.firstName, user.lastName, user.id], 
-		function (err, rows, fields) {
-			if (err) {
-				return callback(err);
-			}
-			callback(null);
+	MongoClient.connect(url, function(err, db) {
+		if (err) callback(err);
+		var dbo = db.db("mydb");
+		var o_id = new ObjectID(user.id);
+		var myquery = { "_id": o_id };
+		var newvalues = { $set: user };
+		dbo.collection("persons").updateOne(myquery, newvalues, function(err, res) {
+		  if (err) callback(err);
+		  console.log("1 document updated" + res);
+		  db.close();
 		});
-	connection.end()	
+	  });
 }
 
 /** load all*/
