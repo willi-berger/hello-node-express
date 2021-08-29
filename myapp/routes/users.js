@@ -17,16 +17,7 @@ router.post('/save', function (req, res, next) {
 		
 		userModel.save(req.body, function (err, result) {
 			if (err) throw err;			
-
-			//  TODO duplicated code find a better soltion, with forward 
-			userModel.loadAll(function(err, users) {
-				if (err) throw err;
-
-				res.render('users', { 
-				  'title': 'Hello Express - Users',
-				  'users': users
-				  });
-			});
+			res.redirect('/users');
 		});
 		
 		
@@ -34,17 +25,10 @@ router.post('/save', function (req, res, next) {
 	} else {
 		console.log("* create new user");
 		userModel.create(req.body, function (err, result) {
-			if (err) throw err;			
+			if (err) throw err;
 
-			//  TODO duplicated code find a better soltion, with forward 
-			userModel.loadAll(function(err, users) {
-				if (err) throw err;
+			res.redirect('/users');
 
-				res.render('users', { 
-				  'title': 'Hello Express - Users',
-				  'users': users
-				  });
-			});
 		});
 		
 	}

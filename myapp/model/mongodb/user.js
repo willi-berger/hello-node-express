@@ -41,6 +41,7 @@ module.exports.save = function (user, callback)
 		  if (err) callback(err);
 		  console.log("1 document updated" + res);
 		  db.close();
+		  callback(null, null);
 		});
 	  });
 }
@@ -83,14 +84,4 @@ module.exports.load = function (id, callback)
 
 };
 
-function createConnection() {
-	// TODO hardcoded DB connection settings read from a configuration
-	return  mysql.createConnection({
-		host     : 'localhost',
-		user     : 'willie',
-		password : 'willie',
-		database : 'willie'
-	});
-
-}
 
